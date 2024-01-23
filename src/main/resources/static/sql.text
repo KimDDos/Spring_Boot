@@ -1,0 +1,8 @@
+create table board(
+bno bigint auto_increment,
+title varchar(200) not null,
+writer varchar(100) not null,
+content text not null,
+reg_at datetime default now(),
+mod_at datetime default now(),
+primary key(bno));

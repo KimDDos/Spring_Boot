@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf/org">
+<th:block th:replace="~{layout :: setFragment(~{this::content})}">
+	<th:block th:fragment="content">
+		<div class=container-md>
+			<h1 style="font-weight: 700"> Board Register Page </h1>
+			<br>
+			<form>
+				<div class="mb-3">
+					<label for="title" class="form-label" style="font-weight: 700; font-size: 26px">Title</label> 
+					<input type="email" class="form-control" id="title" placeholder="name@example.com">
+				</div>
+				<div class="mb-3">
+					<label for="writer" class="form-label" style="font-weight: 700; font-size: 26px">Writer</label> 
+					<input type="email" class="form-control" id="writer" placeholder="닉네임">
+				</div>
+				<div class="mb-3">
+					<label for="content" class="form-label" style="font-weight: 700; font-size: 26px">Content</label>
+					<textarea class="form-control" id="content"	rows="3" style="resize: none; height: 220px">내 용</textarea>
+				</div>
+				<button type="submit" class="btn btn-primary" style="width: 80px; height: 65px;">전송</button>
+			</form>
+		</div>
+	</th:block>
+</th:block>

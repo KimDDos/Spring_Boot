@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+
+    <encoder>
+      <pattern>
+        %d %-5level %5p [%c] -%msg%n
+      </pattern>
+    </encoder>
+  </appender>
+  <logger name="com.example.demo" level="INFO" appender-ref="STDOUT"/>
+  <logger name="jdbc.sqlonly" level="INFO" appender-ref="STDOUT"/>
+  <logger name="jdbc.resultsettable" level="INFO" appender-ref="STDOUT"/>
+  <logger name="org.springframework" level="INFO" appender-ref="STDOUT"/>
+  <logger name="org.springframework.jdbc" level="INFO" appender-ref="STDOUT"/>
+  <logger name="jdbc.connection" level="OFF" appender-ref="STDOUT"/>
+	<!-- level="OFF" 는 사용하지 않겠다는 뜻 -->
+  <root level="INFO">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
